@@ -82,18 +82,18 @@ set -e
 
     # Create the loki_ group (shared with lokid)
     if ! getent group _loki >/dev/null; then
-        groupadd --badnames --system _loki
+        groupadd --system _loki
     fi
 
     # Create _lokinet user if it doesn't exist
     if ! getent passwd _lokinet >/dev/null; then
-        useradd --badnames --system --home-dir /var/lib/lokinet -g _loki _lokinet
+        useradd --system --home-dir /var/lib/lokinet -g _loki _lokinet
 
     fi
 
     # Make sure the _lokinet user is part of the _loki group (in case it already existed)
     if ! id -Gn _lokinet | grep -qw _loki; then
-        useradd --badnames _lokinet _loki
+        useradd _lokinet _loki
     fi
 
      datadir=/var/lib/lokinet
@@ -142,8 +142,8 @@ set -e
 %files
 %license LICENSE.txt
 /etc/systemd/resolved.conf.d/00-lokinet.conf
-/usr/lib/debug/usr/bin/lokinet-0.8.3-1.fc33.x86_64.debug
-/usr/lib/debug/usr/bin/lokinet-vpn-0.8.3-1.fc33.x86_64.debug
+#/usr/lib/debug/usr/bin/lokinet-0.8.3-1.fc33.x86_64.debug
+#/usr/lib/debug/usr/bin/lokinet-vpn-0.8.3-1.fc33.x86_64.debug
 /usr/lib/systemd/system/lokinet.service
 /usr/bin/lokinet
 /usr/bin/lokinet-bootstrap
