@@ -1,6 +1,6 @@
 Name:           loki-network
-Version:        0.8.3
-Release:        1%{?dist}
+Version:        0.8.4
+Release:        2%{?dist}
 Summary:        Lokinet is an anonymous, decentralized and IP based overlay network for the internet.
 
 License:        GPL v3
@@ -25,13 +25,12 @@ BuildRequires:  git
 BuildRequires:  perl
 BuildRequires:  sqlite
 BuildRequires:  zeromq-devel
+BuildRequires:	oxen-mq
 BuildRequires:  cmake
 BuildRequires:  libcap-devel
 BuildRequires:  libuv-devel
 BuildRequires:  libsodium-devel
 BuildRequires:  pkgconf-pkg-config
-Requires:       bash
-Requires:       curl
 
 
 %description
@@ -43,6 +42,7 @@ Requires:       curl
 	network level without any NAT (except for IPv4 in which NAT is permitted due to
 	lack of address availability). 
 
+%global debug_package %{nil}
 %prep
 %setup
 
@@ -51,7 +51,7 @@ Requires:       curl
 
 mkdir -p build
 cd build
-cmake .. -DFORCE_OXENMQ_SUBMODULE=ON -DCMAKE_CXX_FLAGS="-march=x86-64 -mtune=haswell" -DCMAKE_C_FLAGS="-march=x86-64 -mtune=haswell" -DCMAKE_BUILD_TYPE=Release -DWITH_TESTS=OFF -DNATIVE_BUILD=OFF -DUSE_AVX2=OFF -DWITH_SETCAP=OFF -DBUILD_STATIC_DEPS=ON -DBUILD_SHARED_LIBS=OFF -DSTATIC_LINK=ON -DWITH_LTO=OFF
+cmake .. -DFORCE_OXENMQ_SUBMODULE=ON -DCMAKE_CXX_FLAGS="-march=x86-64 -mtune=haswell" -DCMAKE_C_FLAGS="-march=x86-64 -mtune=haswell" -DCMAKE_BUILD_TYPE=Release -DWITH_TESTS=OFF -DNATIVE_BUILD=OFF -DUSE_AVX2=OFF -DWITH_SETCAP=OFF -DBUILD_STATIC_DEPS=ON -DBUILD_SHARED_LIBS=OFF -DSTATIC_LINK=ON -DWITH_LTO=ON
 make -j8
 make DESTDIR=/%{_builddir} install
 
@@ -112,12 +112,11 @@ set -e
     ln -s /etc/loki/lokinet.ini /var/lib/lokinet/lokinet.ini
 
 
-    sudo systemctl enable lokinet
-    sudo systemctl start lokinet
-
     if [ -x /bin/systemctl ] && /bin/systemctl --quiet is-active systemd-resolved.service; then
         /bin/systemctl restart systemd-resolved.service
     fi
+
+    systemctl enable lokinet
 
 %preun
 
@@ -125,7 +124,7 @@ set -e
 
 set -e
 
-    sudo systemctl stop lokinet
+    systemctl stop lokinet
 
 %postun
 
@@ -142,8 +141,6 @@ set -e
 %files
 %license LICENSE.txt
 /etc/systemd/resolved.conf.d/00-lokinet.conf
-#/usr/lib/debug/usr/bin/lokinet-0.8.3-1.fc33.x86_64.debug
-#/usr/lib/debug/usr/bin/lokinet-vpn-0.8.3-1.fc33.x86_64.debug
 /usr/lib/systemd/system/lokinet.service
 /usr/bin/lokinet
 /usr/bin/lokinet-bootstrap
@@ -154,3 +151,6 @@ set -e
 %changelog
 * Sun Mar 07 2021 Technical Tumbleweed (necro_nemesis@hotmail.com) Lokinet 0.8.2
 -First Lokinet RPM
+-Second Lokinet RPM
+ Built with v0.8.4
+ 
