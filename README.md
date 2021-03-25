@@ -20,34 +20,34 @@ In order build Lokinet from source the SOURCE directory must contain the followi
 
 ### Lokinet
 
-`git clone --recursive https://github.com/oxen-io/loki-network`
-`mv loki-network loki-network-<VERSION>`
-`tar czf loki-network-<VERSION>.src.tar.gz loki-network-<VERSION>`
-<version> is version number of loki-network found in source e.g 0.8.4~2
+`git clone --recursive https://github.com/oxen-io/loki-network`  
+`mv loki-network loki-network-<VERSION>`  
+`tar czf loki-network-<VERSION>.src.tar.gz loki-network-<VERSION>`  
+<version> is version number of loki-network found in source e.g 0.8.4~2  
 
 ### Oxen-MQ
 
-`git clone https://github.com/oxen-io/oxen-mq`
-`mv oxen-mq oxen-mq-<VERSION>` 
-`tar czf oxen-mq-<VERSION>.src.tar.gz oxen-mq-<version>`
-<version> is version number of oxen-mq found in source e.g 1.2.4
+`git clone https://github.com/oxen-io/oxen-mq`  
+`mv oxen-mq oxen-mq-<VERSION>`   
+`tar czf oxen-mq-<VERSION>.src.tar.gz oxen-mq-<version>`  
+<version> is version number of oxen-mq found in source e.g 1.2.4  
   
 ### Loki Network Control Panel
 
-`git clone https://github.com/oxen-io/kloki-network-control-panel`
-`mv loki-network-control-panel loki-network-control-panel-<VERSION>`
-`tar czf loki-network-control-panel-<VERSION>.src.tar.gz loki-network-control-panel-<VERSION>`
-<VERSION> is the version number of loki-network-control-panel found in source e.g. o.3.6
+`git clone https://github.com/oxen-io/kloki-network-control-panel`  
+`mv loki-network-control-panel loki-network-control-panel-<VERSION>`  
+`tar czf loki-network-control-panel-<VERSION>.src.tar.gz loki-network-control-panel-<VERSION>`  
+<VERSION> is the version number of loki-network-control-panel found in source e.g. o.3.6  
   
-When complete the SOURCE dir should appear as follows reflectig the latest versions.
+When complete the SOURCE dir should appear as follows reflectig the latest versions.  
 
-lokinet.ini loki-network-0.8.4.src.tar.gz loki-network-control-panel-0.3.6.src.tar.gz oxen-mq-1.2.4.src.tar.gz share
+lokinet.ini loki-network-0.8.4.src.tar.gz loki-network-control-panel-0.3.6.src.tar.gz oxen-mq-1.2.4.src.tar.gz share  
 
-In order to build the three packages the three following SPEC files are required in the SPEC file of RPM package mananger.
--lokinet.spec
--oxen.spec
--gui.spec
+In order to build the three packages the three following SPEC files are required in the SPEC file of RPM package mananger.  
+- lokinet.spec
+- oxen.spec
+- gui.spec
 
-To build `rpmbuild -ba /home/$USER/rpmbuild/SPEC/<package>.spec`
-for each of the packages.
-RPM packages will be written to /home/$USER/rpmbuild/RPMS
+To build `rpmbuild -ba /home/$USER/rpmbuild/SPEC/<package>.spec`  
+for each of the packages.  
+RPM packages will be written to /home/$USER/rpmbuild/RPMS  
