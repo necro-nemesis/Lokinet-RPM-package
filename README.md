@@ -49,7 +49,7 @@ When complete the SOURCE dir should appear as follows reflectig the latest versi
 
 lokinet.ini loki-network-0.8.4.src.tar.gz loki-network-control-panel-0.3.6.src.tar.gz lokinet.service oxen-mq-1.2.4.src.tar.gz share  
 
-In order to build the three packages the three following SPEC files are required in the SPEC file of RPM package mananger.  
+In order to build the three packages the three following SPEC files are required in the SPEC folder of RPM package mananger.  
 - lokinet.spec
 - oxen.spec
 - gui.spec
