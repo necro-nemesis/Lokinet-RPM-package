@@ -1,6 +1,8 @@
-## Lokinet RPM packages
+# Lokinet RPM packages
 
 This is a work in progress
+
+## Overview
 
 To install Lokinet requires three RPM packages to be yum installed. The three packages are in this repository.
 
@@ -17,28 +19,30 @@ In order build Lokinet from source the SOURCE directory must contain the followi
 - a copy of oxen-mq (gz tarball) - required to build oxen-mq
 - a copy of loki-network-control (gz tarball) - required to build loki-network-control-panel
 
-### Acquiring, archiving and naming tarballs for RPM Package manager. All source files must be in SOURCE dir.
+## Obtaining Sources
+
+Acquiring, archiving and naming tarballs for RPM Package manager. All source files must be in SOURCE dir.
 
 ### Lokinet
 
 `git clone --recursive https://github.com/oxen-io/loki-network`  
 `mv loki-network loki-network-<VERSION>`  
 `tar czf loki-network-<VERSION>.src.tar.gz loki-network-<VERSION>`  
-<version> is version number of loki-network found in source e.g 0.8.4~2  
+`<VERSION>` is version number of loki-network found in source e.g 0.8.4~2  
 
 ### Oxen-MQ
 
 `git clone https://github.com/oxen-io/oxen-mq`  
 `mv oxen-mq oxen-mq-<VERSION>`   
-`tar czf oxen-mq-<VERSION>.src.tar.gz oxen-mq-<version>`  
-<version> is version number of oxen-mq found in source e.g 1.2.4  
+`tar czf oxen-mq-<VERSION>.src.tar.gz oxen-mq-<VERSION>`  
+`<VERSION>` is version number of oxen-mq found in source e.g 1.2.4  
   
 ### Loki Network Control Panel
 
 `git clone https://github.com/oxen-io/kloki-network-control-panel`  
 `mv loki-network-control-panel loki-network-control-panel-<VERSION>`  
 `tar czf loki-network-control-panel-<VERSION>.src.tar.gz loki-network-control-panel-<VERSION>`  
-<VERSION> is the version number of loki-network-control-panel found in source e.g. o.3.6  
+`<VERSION>` is the version number of loki-network-control-panel found in source e.g. o.3.6  
   
 When complete the SOURCE dir should appear as follows reflectig the latest versions.  
 
@@ -48,6 +52,8 @@ In order to build the three packages the three following SPEC files are required
 - lokinet.spec
 - oxen.spec
 - gui.spec
+
+## BUILD
 
 To build `rpmbuild -ba /home/$USER/rpmbuild/SPEC/<package>.spec`  
 for each of the packages.  
