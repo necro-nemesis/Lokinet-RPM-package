@@ -7,9 +7,9 @@ License:        GPL v3
 URL:            http://lokinet.org/
 Source0:        %{name}-%{version}.src.tar.gz
 Source1:	lokinet.service
-Source2:	00-lokinet.conf
-Source3:	lokinet-resolvconf
-Source4:	lokinet.ini
+Source2:	lokinet.ini
+#Source3:	00-lokinet.conf
+#Source4:	lokinet-resolvconf
 
 BuildRequires:	systemd
 BuildRequires:  automake
@@ -60,7 +60,7 @@ make DESTDIR=/%{_builddir} install
 rm -rf $RPM_BUILD_ROOT
 
 mkdir -p %{buildroot}/usr/bin
-mkdir -p %{buildroot}/etc/systemd/resolved.conf.d
+#mkdir -p %{buildroot}/etc/systemd/resolved.conf.d
 mkdir -p %{buildroot}%{_unitdir}
 mkdir -p %{buildroot}/usr/sbin
 mkdir -p %{buildroot}/var/lib/lokinet
@@ -70,9 +70,9 @@ cp %{_builddir}/usr/local/bin/lokinet %{buildroot}/usr/bin
 cp %{_builddir}/usr/local/bin/lokinet-bootstrap %{buildroot}/usr/bin
 cp %{_builddir}/usr/local/bin/lokinet-vpn %{buildroot}/usr/bin
 cp %{SOURCE1} %{buildroot}%{_unitdir}
-cp %{SOURCE2} %{buildroot}/etc/systemd/resolved.conf.d
-cp %{SOURCE3} %{buildroot}/usr/sbin
-cp %{SOURCE4} %{buildroot}/etc/loki
+cp %{SOURCE2} %{buildroot}/etc/loki
+#cp %{SOURCE3} %{buildroot}/etc/systemd/resolved.conf.d
+#cp %{SOURCE4} %{buildroot}/usr/sbin
 
 %post
 
@@ -112,9 +112,9 @@ set -e
     ln -s /etc/loki/lokinet.ini /var/lib/lokinet/lokinet.ini
 
 
-    if [ -x /bin/systemctl ] && /bin/systemctl --quiet is-active systemd-resolved.service; then
-        /bin/systemctl restart systemd-resolved.service
-    fi
+#    if [ -x /bin/systemctl ] && /bin/systemctl --quiet is-active systemd-resolved.service; then
+#        /bin/systemctl restart systemd-resolved.service
+#    fi
 
     systemctl enable lokinet
 
@@ -140,12 +140,12 @@ set -e
 
 %files
 %license LICENSE.txt
-/etc/systemd/resolved.conf.d/00-lokinet.conf
+#/etc/systemd/resolved.conf.d/00-lokinet.conf
 /usr/lib/systemd/system/lokinet.service
 /usr/bin/lokinet
 /usr/bin/lokinet-bootstrap
 /usr/bin/lokinet-vpn
-/usr/sbin/lokinet-resolvconf
+#/usr/sbin/lokinet-resolvconf
 %config(noreplace)/etc/loki/lokinet.ini
 
 %changelog
