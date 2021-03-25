@@ -1,4 +1,4 @@
-**Lokinet RPM packages
+##Lokinet RPM packages
 
 This is a work in progress
 
@@ -16,21 +16,24 @@ In order build Lokinet from source the SOURCE directory must contain the followi
 -a copy of the shared folder (unarchived in root) - required for lokinet-gui found n the gui files
 -a copy of oxen-mq made into a (tarball) - required to build oxen-mq
 
-***Acquiring, archiving and naming tarballs for RPM Package manager. All tarballs must be in SOURCE
+###Acquiring, archiving and naming tarballs for RPM Package manager. All tarballs must be in SOURCE
 
-***Lokinet
+###Lokinet
+
 `git clone --recursive https://github.com/oxen-io/loki-network`
-`mv loki-network loki-network-<VERSION>
+`mv loki-network loki-network-<VERSION>`
 `tar czf loki-network-<VERSION>.src.tar.gz loki-network-<VERSION>`
 <version> is version number of loki-network found in source e.g 0.8.4~2
 
-***Oxen-MQ
+###Oxen-MQ
+
 `git clone https://github.com/oxen-io/oxen-mq`
-`mv oxen-mq oxen-mq-<VERSION> 
+`mv oxen-mq oxen-mq-<VERSION>` 
 `tar czf oxen-mq-<VERSION>.src.tar.gz oxen-mq-<version>`
 <version> is version number of oxen-mq found in source e.g 1.2.4
   
-***Loki Network Control Panel
+###Loki Network Control Panel
+
 `git clone https://github.com/oxen-io/kloki-network-control-panel`
 `mv loki-network-control-panel loki-network-control-panel-<VERSION>`
 `tar czf loki-network-control-panel-<VERSION>.src.tar.gz loki-network-control-panel-<VERSION>`
