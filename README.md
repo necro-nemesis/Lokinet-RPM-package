@@ -17,7 +17,7 @@ In order build Lokinet from source the SOURCE directory must contain the followi
 - a copy of oxen-mq (gz tarball) - required to build oxen-mq
 - a copy of loki-network-control (gz tarball) - required to build loki-network-control-panel
 
-### Acquiring, archiving and naming tarballs for RPM Package manager. All tarballs must be in SOURCE
+### Acquiring, archiving and naming tarballs for RPM Package manager. All source files must be in SOURCE dir.
 
 ### Lokinet
 
