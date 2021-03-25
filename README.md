@@ -15,6 +15,7 @@ In order build Lokinet from source the SOURCE directory must contain the followi
 
 - a copy of loki-netowrk (gz tarball) - required to build lokinet
 - a copy of lokinet.ini (unachived in root) - required to build lokinet
+- a copy of lokinet.service (unarchived in root) - required to build lokinet
 - a copy of the shared folder (unarchived in root) - required for lokinet-gui found in the gui files.
 - a copy of oxen-mq (gz tarball) - required to build oxen-mq
 - a copy of loki-network-control (gz tarball) - required to build loki-network-control-panel
@@ -46,7 +47,7 @@ Acquiring, archiving and naming tarballs for RPM Package manager. All source fil
   
 When complete the SOURCE dir should appear as follows reflectig the latest versions.  
 
-lokinet.ini loki-network-0.8.4.src.tar.gz loki-network-control-panel-0.3.6.src.tar.gz oxen-mq-1.2.4.src.tar.gz share  
+lokinet.ini loki-network-0.8.4.src.tar.gz loki-network-control-panel-0.3.6.src.tar.gz lokinet.service oxen-mq-1.2.4.src.tar.gz share  
 
 In order to build the three packages the three following SPEC files are required in the SPEC file of RPM package mananger.  
 - lokinet.spec
@@ -58,3 +59,9 @@ In order to build the three packages the three following SPEC files are required
 To build `rpmbuild -ba /home/$USER/rpmbuild/SPEC/<package>.spec`  
 for each of the packages.  
 RPM packages will be written to /home/$USER/rpmbuild/RPMS  
+
+## BUILDING WITH RESOLVCONF
+
+ - Uncomment code lines commented out in lokinet.spec
+ - add 00-lokinet.conf & lokinet-resolvconf to SOURCES folder
+ - build  
