@@ -11,10 +11,11 @@ Requires:
 
 In order build Lokinet from source the SOURCE directory must contain the following:
 
-- a copy of the source folder (made into a tarball) - required to build lokinet
+- a copy of loki-netowrk (gz tarball) - required to build lokinet
 - a copy of lokinet.ini (unachived in root) - required to build lokinet
-- a copy of the shared folder (unarchived in root) - required for lokinet-gui found n the gui files
-- a copy of oxen-mq made into a (tarball) - required to build oxen-mq
+- a copy of the shared folder (unarchived in root) - required for lokinet-gui found in the gui files.
+- a copy of oxen-mq (gz tarball) - required to build oxen-mq
+- a copy of loki-network-control (gz tarball) - required to build loki-network-control-panel
 
 ### Acquiring, archiving and naming tarballs for RPM Package manager. All tarballs must be in SOURCE
 
