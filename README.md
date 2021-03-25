@@ -58,7 +58,14 @@ In order to build the three packages the three following SPEC files are required
 
 To build `rpmbuild -ba /home/$USER/rpmbuild/SPEC/<package>.spec`  
 for each of the packages.  
-RPM packages will be written to /home/$USER/rpmbuild/RPMS  
+RPM packages will be written to /home/$USER/rpmbuild/RPMS
+
+## INSTALL
+
+Download the three RPM packages to the target system  
+`sudo yum install oxen-mq-<VERSION>.fc33.x86_64.rpm`  
+`sudo yum install loki-network-<VERSION>.fc33.x86_64.rpm`  
+`sudo yum install loki-network-control-panel-<VERSION>.fc33.x86_64.rpm`  
 
 ## BUILDING WITH RESOLVCONF
 
