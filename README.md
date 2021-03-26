@@ -47,7 +47,7 @@ Acquiring, archiving and naming tarballs for RPM Package manager. All source fil
 - `<VERSION>` is the version number of loki-network-control-panel found in source e.g. 0.3.6  
 - download a copy shared folder to the SOURCES folder.
 
-When complete the SOURCE dir should appear as follows reflectig the latest versions.  
+When complete the SOURCE dir should appear as follows reflecting the latest versions.  
 
 lokinet.ini loki-network-0.8.4.src.tar.gz loki-network-control-panel-0.3.6.src.tar.gz lokinet.service oxen-mq-1.2.4.src.tar.gz share  
 
