@@ -29,7 +29,7 @@ loki-network
 
 loki-network-control-panel  
 - a copy of loki-network-control (gz tarball)   
-- a copy of the shared folder (unarchived)    
+- a copy of the share folder (unarchived)    
 
 ## Obtaining Sources
 
@@ -56,7 +56,7 @@ Acquiring, archiving and naming tarballs for RPM Package manager. All source fil
 `mv loki-network-control-panel loki-network-control-panel-<VERSION>`  
 `tar czf loki-network-control-panel-<VERSION>.src.tar.gz loki-network-control-panel-<VERSION>`  
 - `<VERSION>` is the version number of loki-network-control-panel found in source e.g. 0.3.6  
-- download a copy of the shared folder here in to the SOURCES folder.
+- download a copy of the share folder here in to the SOURCES folder.
 
 When complete the SOURCE dir should appear as follows reflecting the latest versions.  
 
