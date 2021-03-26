@@ -63,11 +63,13 @@ When complete the SOURCE dir should appear as follows reflecting the latest vers
 lokinet.ini loki-network-0.8.4.src.tar.gz loki-network-control-panel-0.3.6.src.tar.gz lokinet.service oxen-mq-1.2.4.src.tar.gz share  
 
 In order to build the three packages the three following SPEC files are required in the SPEC folder of RPM package mananger.  
-- lokinet.spec
 - oxen.spec
+- lokinet.spec
 - gui.spec
 
 ## BUILD
+
+### Building the packages requires installation of the rpm package on the build system to be used as build dependecies. The packages must be built and installed in order of oxen-mq, loki-network and lastly the GUI. After building the package install it on the build system as it is called as a build dependency for the next package being built.   
 
 1. Edit the <package>.spec file "Version:" value to match the `<VERSION>` you provided for the source file name.
 2. The build command is `rpmbuild -ba /home/$USER/rpmbuild/SPEC/<package>.spec`  
