@@ -63,7 +63,7 @@ In order to build the three packages the three following SPEC files are required
 
 ## BUILD
 
-1. Edit the <package>.spec file "Version:" value to match the <VERSION> you provided for the source file name.
+1. Edit the <package>.spec file "Version:" value to match the `<VERSION>` you provided for the source file name.
 2. The build command is `rpmbuild -ba /home/$USER/rpmbuild/SPEC/<package>.spec`  
 Repeat 1. & 2. for each of the packages.  
 RPM packages will be written to /home/$USER/rpmbuild/RPMS
