@@ -4,7 +4,9 @@ This is a work in progress
 
 ## Prep System to build with RPM Package Manager
 
-https://www.schotty.com/EL_And_Fedora/RPM_Creation/
+https://www.schotty.com/EL_And_Fedora/RPM_Creation/  
+
+###Clicking on image below takes you to RPM Package Manager tutorial video.  
 
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/m-3tFdSI3IE/0.jpg)](http://www.youtube.com/watch?v=m-3tFdSI3IE "RPM")
 
