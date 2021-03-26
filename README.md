@@ -46,7 +46,7 @@ Acquiring, archiving and naming tarballs for RPM Package manager. All source fil
   
 ### Loki Network Control Panel
 
-`git clone https://github.com/oxen-io/kloki-network-control-panel`  
+`git clone https://github.com/oxen-io/loki-network-control-panel`  
 `mv loki-network-control-panel loki-network-control-panel-<VERSION>`  
 `tar czf loki-network-control-panel-<VERSION>.src.tar.gz loki-network-control-panel-<VERSION>`  
 - `<VERSION>` is the version number of loki-network-control-panel found in source e.g. 0.3.6  
