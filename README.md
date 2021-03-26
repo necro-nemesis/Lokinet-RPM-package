@@ -15,15 +15,15 @@ In order build Lokinet from source the SOURCE directory must contain the followi
 
 lokinet  
 - a copy of loki-netowrk (gz tarball)  
-- a copy of lokinet.ini (unachived in root)  
-- a copy of lokinet.service (unarchived in root)  
+- a copy of lokinet.ini (unachived)  
+- a copy of lokinet.service (unarchived)  
 
 oxen-mq  
 - a copy of oxen-mq (gz tarball)  
 
 loki-network-control-panel  
 - a copy of loki-network-control (gz tarball)   
-- a copy of the shared folder (unarchived in root)    
+- a copy of the shared folder (unarchived)    
 
 ## Obtaining Sources
 
