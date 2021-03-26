@@ -69,7 +69,7 @@ In order to build the three packages the three following SPEC files are required
 
 ## BUILD
 
-### Building the packages requires installation of the built rpm packages on the build system to be used as build dependecies. The packages must be built and installed in order of oxen-mq, loki-network and lastly the GUI. After building the package install it on the build system as it is called as a build dependency for the next package being built.   
+### Building the packages requires installation of the built rpm packages on the build system to be used as build dependecies. The packages must be built and installed in order of oxen-mq, loki-network and lastly loki-network-control-panel. After building the package install it on the build system as it is called as a build dependency for the next package being built.   
 
 1. Edit the `<package>`.spec file "Version:" value to match the `<VERSION>` you provided for the source file name.
 2. The build command is `rpmbuild -ba /home/$USER/rpmbuild/SPEC/<package>.spec`
