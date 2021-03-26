@@ -19,13 +19,13 @@ Requires:
 
 In order build Lokinet from source the SOURCE directory must contain the following:
 
-lokinet  
+oxen-mq  
+- a copy of oxen-mq (gz tarball)  
+
+loki-network  
 - a copy of loki-netowrk (gz tarball)  
 - a copy of lokinet.ini (unachived)  
 - a copy of lokinet.service (unarchived)  
-
-oxen-mq  
-- a copy of oxen-mq (gz tarball)  
 
 loki-network-control-panel  
 - a copy of loki-network-control (gz tarball)   
