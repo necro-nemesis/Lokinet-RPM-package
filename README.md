@@ -60,7 +60,7 @@ Acquiring, archiving and naming tarballs for RPM Package manager. All source fil
 
 When complete the SOURCE dir should appear as follows reflecting the latest versions.  
 
-==lokinet.ini loki-network-0.8.4.src.tar.gz loki-network-control-panel-0.3.6.src.tar.gz lokinet.service oxen-mq-1.2.4.src.tar.gz share==     
+lokinet.ini loki-network-0.8.4.src.tar.gz loki-network-control-panel-0.3.6.src.tar.gz lokinet.service oxen-mq-1.2.4.src.tar.gz share     
 
 In order to build the three packages the three following SPEC files are required in the SPEC folder of RPM package mananger.  
 - oxen.spec
