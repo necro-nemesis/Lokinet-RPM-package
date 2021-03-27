@@ -33,14 +33,16 @@ loki-network-control-panel
 - a copy of loki-network-control (gz tarball)   
 - a copy of the share folder (unarchived)    
 
-## Obtaining Sources
+## Obtaining SOURCES and SPECS
 
-Acquiring, archiving and naming tarballs for RPM Package manager.  
-Copy the contents of the SOURCES and SPECS folders from here to your SOURCES and SPECS folders in your rpmbuild directory.  
+Cloning, remaming and archiving source code into tarballs in the SOURCES directory also adding in files from here to the SOURCES and SPECS folders.  
+
+Copy the contents of the SOURCES and SPECS folders from here to your SOURCES and SPECS folders respectively in your rpmbuild directory.  
+Clone the latest versions of the source code from their respective github repositories as follows:  
 
 ### oxen-mq
 
-Clone the lastest oxen-mq source code in your SOURCES folder, rename it and tarball it as follows:  
+Clone the lastest oxen-mq source code in your SOURCES folder, rename it and tarball:  
 
     git clone https://github.com/oxen-io/oxen-mq  
     mv oxen-mq oxen-mq-<VERSION>
@@ -49,7 +51,7 @@ Clone the lastest oxen-mq source code in your SOURCES folder, rename it and tarb
 
 ### loki-network
 
-Clone the lastest loki-network source code in your SOURCES folder, rename it and tarball it as follows:  
+Clone the lastest loki-network source code in your SOURCES folder, rename it and tarball:  
 
     git clone --recursive https://github.com/oxen-io/loki-network  
     mv loki-network loki-network-<VERSION>  
@@ -59,7 +61,7 @@ Clone the lastest loki-network source code in your SOURCES folder, rename it and
   
 ### loki-network-control-panel
 
-Clone the lastest loki-network-control-panel source code in your SOURCES folder, rename it and tarball it as follows: 
+Clone the lastest loki-network-control-panel source code in your SOURCES folder, rename it and tarball: 
 
     git clone https://github.com/oxen-io/loki-network-control-panel
     mv loki-network-control-panel loki-network-control-panel-<VERSION>
@@ -70,11 +72,6 @@ Clone the lastest loki-network-control-panel source code in your SOURCES folder,
 When complete the SOURCE dir should appear as follows reflecting the latest versions.  
 
 lokinet.ini loki-network-0.8.4.src.tar.gz loki-network-control-panel-0.3.6.src.tar.gz lokinet.service oxen-mq-1.2.4.src.tar.gz share     
-
-In order to build the three packages the three following SPEC files are required in the SPEC folder of RPM package mananger.  
-- oxen.spec
-- lokinet.spec
-- gui.spec
 
 ## Build
 
