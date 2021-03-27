@@ -54,9 +54,9 @@ Acquiring, archiving and naming tarballs for RPM Package manager. All source fil
   
 ### loki-network-control-panel
 
-`git clone https://github.com/oxen-io/loki-network-control-panel`  
-`mv loki-network-control-panel loki-network-control-panel-<VERSION>`  
-`tar czf loki-network-control-panel-<VERSION>.src.tar.gz loki-network-control-panel-<VERSION>`  
+    git clone https://github.com/oxen-io/loki-network-control-panel
+    mv loki-network-control-panel loki-network-control-panel-<VERSION>
+    tar czf loki-network-control-panel-<VERSION>.src.tar.gz loki-network-control-panel-<VERSION>
 - `<VERSION>` is the version number of loki-network-control-panel found in source e.g. 0.3.6  
 - download a copy of the share folder here in to the SOURCES folder.
 
@@ -75,8 +75,8 @@ In order to build the three packages the three following SPEC files are required
 
 1. Edit the `<package>`.spec file "Version:" value to match the `<VERSION>` you provided for the source file name.
 2. The build command is `rpmbuild -ba /home/$USER/rpmbuild/SPEC/<package>.spec`
-3. `cd /home/$USER/rpmbuild/RPMS`  
-4. `sudo yum install <the package last built>`    
+3.    cd /home/$USER/rpmbuild/RPMS  
+4.    sudo yum install <the package last built>    
 Repeat steps 1.,2.,3 and 4. for each of the packages. Return to SPEC dir to build next package.  
 RPM packages will be written to /home/$USER/rpmbuild/RPMS
 
