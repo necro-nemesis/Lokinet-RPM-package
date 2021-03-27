@@ -39,16 +39,16 @@ Acquiring, archiving and naming tarballs for RPM Package manager. All source fil
 
 ### oxen-mq
 
-    $ git clone https://github.com/oxen-io/oxen-mq  
-    $ mv oxen-mq oxen-mq-<VERSION>
-    $ tar czf oxen-mq-<VERSION>.src.tar.gz oxen-mq-<VERSION>
+    git clone https://github.com/oxen-io/oxen-mq  
+    mv oxen-mq oxen-mq-<VERSION>
+    tar czf oxen-mq-<VERSION>.src.tar.gz oxen-mq-<VERSION>
 `<VERSION>` is version number of oxen-mq found in source e.g 1.2.4
 
 ### loki-network
 
-`git clone --recursive https://github.com/oxen-io/loki-network`  
-`mv loki-network loki-network-<VERSION>`  
-`tar czf loki-network-<VERSION>.src.tar.gz loki-network-<VERSION>`  
+    git clone --recursive https://github.com/oxen-io/loki-network  
+    mv loki-network loki-network-<VERSION>  
+    tar czf loki-network-<VERSION>.src.tar.gz loki-network-<VERSION>  
 - `<VERSION>` is version number of loki-network found in source e.g 0.8.4~2  
 - download copies of lokinet.ini and lokinet.service here in to the SOURCES folder
   
