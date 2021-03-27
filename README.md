@@ -89,9 +89,10 @@ Download the three RPM packages to the target system
 
 ## Building with Resolvconf
 
- - Uncomment code lines commented out in lokinet.spec
- - add 00-lokinet.conf & lokinet-resolvconf to SOURCES folder
- - build  
+ - Use SPEC file lokinetresolv.spec to build
+Differences between lokinetresolv.spec and lokinet.spec
+ - Uncommented resolvconf code found in lokinet.spec 
+ - installs and uses 00-lokinet.conf & lokinet-resolvconf in SOURCES folder
 
 ## Support us
 
