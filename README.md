@@ -78,10 +78,10 @@ lokinet.ini loki-network-0.8.4.src.tar.gz loki-network-control-panel-0.3.6.src.t
 ### Building the packages requires installation of the built rpm packages on the build system to be used as build dependencies. The packages must be built and installed in order of oxen-mq, loki-network and lastly loki-network-control-panel. After building the package install it on the build system as it is called as a build dependency for the next package being built.   
 
 1. Edit the `<package>`.spec file "Version:" value to match the `<VERSION>` you provided for the source file name.
-2. ![](https://i.imgur.com/Je26PET.jpg)
-3. The build command is `rpmbuild -ba /home/$USER/rpmbuild/SPEC/<package>.spec`
-4. `cd /home/$USER/rpmbuild/RPMS`  
-5. `sudo yum install <the package last built>`  
+![](https://i.imgur.com/Je26PET.jpg)
+2. The build command is `rpmbuild -ba /home/$USER/rpmbuild/SPEC/<package>.spec`
+3. `cd /home/$USER/rpmbuild/RPMS`  
+4. `sudo yum install <the package last built>`  
 Repeat steps 1.,2.,3 and 4. for each of the packages. Return to SPEC dir to build next package.  
 RPM packages will be written to /home/$USER/rpmbuild/RPMS
 
