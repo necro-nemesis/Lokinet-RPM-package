@@ -69,7 +69,7 @@ In order to build the three packages the three following SPEC files are required
 - lokinet.spec
 - gui.spec
 
-## BUILD
+## Build
 
 ### Building the packages requires installation of the built rpm packages on the build system to be used as build dependencies. The packages must be built and installed in order of oxen-mq, loki-network and lastly loki-network-control-panel. After building the package install it on the build system as it is called as a build dependency for the next package being built.   
 
@@ -80,14 +80,14 @@ In order to build the three packages the three following SPEC files are required
 Repeat steps 1.,2.,3 and 4. for each of the packages. Return to SPEC dir to build next package.  
 RPM packages will be written to /home/$USER/rpmbuild/RPMS
 
-## INSTALL
+## Install
 
 Download the three RPM packages to the target system  
 `sudo yum install oxen-mq-<VERSION>.fc33.x86_64.rpm`  
 `sudo yum install loki-network-<VERSION>.fc33.x86_64.rpm`  
 `sudo yum install loki-network-control-panel-<VERSION>.fc33.x86_64.rpm`  
 
-## BUILDING WITH RESOLVCONF
+## Building with Resolvconf
 
  - Uncomment code lines commented out in lokinet.spec
  - add 00-lokinet.conf & lokinet-resolvconf to SOURCES folder
