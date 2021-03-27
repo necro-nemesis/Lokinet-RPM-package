@@ -83,6 +83,7 @@ RPM packages will be written to /home/$USER/rpmbuild/RPMS
 ## Install
 
 Download the three RPM packages to the target system  
+
     sudo yum install oxen-mq-<VERSION>.fc33.x86_64.rpm
     sudo yum install loki-network-<VERSION>.fc33.x86_64.rpm
     sudo yum install loki-network-control-panel-<VERSION>.fc33.x86_64.rpm
