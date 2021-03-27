@@ -1,5 +1,5 @@
 # Lokinet RPM packages
-![](https://i.imgur.com/FpzaRaL.jpg)
+![](https://i.imgur.com/xUwEG0k.png)
 
 This is a work in progress
 
