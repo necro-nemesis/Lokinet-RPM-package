@@ -35,7 +35,7 @@ loki-network-control-panel
 
 ## Obtaining SOURCES and SPECS
 
-Cloning, remaming and archiving source code into tarballs in the SOURCES directory also adding in files from here to the SOURCES and SPECS folders.  
+Cloning, renaming and archiving source code into tarballs in the SOURCES directory also adding in files from here to the SOURCES and SPECS folders.  
 
 Copy the contents of the SOURCES and SPECS folders from here to your SOURCES and SPECS folders respectively in your rpmbuild directory.  
 Clone the latest versions of the source code from their respective github repositories as follows:  
