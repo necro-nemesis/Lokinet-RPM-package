@@ -35,9 +35,12 @@ loki-network-control-panel
 
 ## Obtaining Sources
 
-Acquiring, archiving and naming tarballs for RPM Package manager. All source files must be in SOURCE dir.
+Acquiring, archiving and naming tarballs for RPM Package manager.  
+Copy the contents of the SOURCES and SPECS folders from here to your SOURCES and SPECS folders in your rpmbuild directory.  
 
 ### oxen-mq
+
+Clone the lastest oxen-mq source code in your SOURCES folder, rename it and tarball it as follows:  
 
     git clone https://github.com/oxen-io/oxen-mq  
     mv oxen-mq oxen-mq-<VERSION>
@@ -46,6 +49,8 @@ Acquiring, archiving and naming tarballs for RPM Package manager. All source fil
 
 ### loki-network
 
+Clone the lastest loki-network source code in your SOURCES folder, rename it and tarball it as follows:  
+
     git clone --recursive https://github.com/oxen-io/loki-network  
     mv loki-network loki-network-<VERSION>  
     tar czf loki-network-<VERSION>.src.tar.gz loki-network-<VERSION>  
@@ -53,6 +58,8 @@ Acquiring, archiving and naming tarballs for RPM Package manager. All source fil
 - download copies of lokinet.ini and lokinet.service here in to the SOURCES folder
   
 ### loki-network-control-panel
+
+Clone the lastest loki-network-control-panel source code in your SOURCES folder, rename it and tarball it as follows: 
 
     git clone https://github.com/oxen-io/loki-network-control-panel
     mv loki-network-control-panel loki-network-control-panel-<VERSION>
