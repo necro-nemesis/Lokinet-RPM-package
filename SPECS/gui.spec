@@ -17,7 +17,6 @@ BuildRequires:  qt5-qtbase
 BuildRequires:  qt5-qtdeclarative-devel
 BuildRequires:	qt5-qtquickcontrols
 BuildRequires:  qt5-qtquickcontrols2
-BuildRequires:  qt5-qtcharts
 BuildRequires:  qt5-qtcharts-devel
 BuildRequires:  qt5-qtsvg-devel
 BuildRequires:  cmake
@@ -25,7 +24,7 @@ BuildRequires:  pkgconf-pkg-config
 BuildRequires:  oxen-mq
 BuildRequires:  loki-network
 Requires:	qt5-qtcharts
-Requires:	qt5-gtgraphicaleffects
+Requires:	qt5-qtgraphicaleffects
 Requires:	qt5-qtbase
 Requires:	qt5-qtquickcontrols
 Requires:	qt5-qtquickcontrols2
