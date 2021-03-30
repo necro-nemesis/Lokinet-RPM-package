@@ -41,7 +41,7 @@ Clone the latest versions of the source code from their respective github reposi
 
 Clone the lastest oxen-mq source code in your SOURCES folder, rename it and tarball:  
 
-    git clone https://github.com/oxen-io/oxen-mq  
+    git clone --recursive https://github.com/oxen-io/oxen-mq  
     mv oxen-mq oxen-mq-<VERSION>
     tar czf oxen-mq-<VERSION>.src.tar.gz oxen-mq-<VERSION>
 `<VERSION>` is version number of oxen-mq found in source e.g 1.2.4
