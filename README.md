@@ -76,7 +76,8 @@ lokinet.ini loki-network-0.8.4.src.tar.gz loki-network-control-panel-0.3.6.src.t
 
 Install dependencies  
 
-    $ sudo yum install automake cmake gcc-c++ libsodium-devel zeromq-devel
+    $ sudo yum install automake cmake gcc-c++ libsodium-devel zeromq-devel libcap-devel libsqlite3x-devel libtool libuv-devel perl unbound-devel
+
 
 1. Edit the `<package>`.spec file "Version:" value to match the `<VERSION>` you provided for the source file name.
 ![](https://i.imgur.com/Je26PET.jpg)
