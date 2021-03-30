@@ -74,7 +74,7 @@ lokinet.ini loki-network-0.8.4.src.tar.gz loki-network-control-panel-0.3.6.src.t
 
 ### Building the packages requires installation of the built rpm packages on the build system to be used as build dependencies. The packages must be built and installed in order of oxen-mq, loki-network and lastly loki-network-control-panel. After building the package install it on the build system as it is called as a build dependency for the next package being built.   
 
-Install dependencies
+Install dependencies  
     $ sudo yum install automake cmake gcc-c++ libsodium-devel zeromq-devel
 
 1. Edit the `<package>`.spec file "Version:" value to match the `<VERSION>` you provided for the source file name.
