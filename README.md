@@ -22,7 +22,7 @@ oxen-mq
 - a copy of oxen-mq (gz tarball)  
 
 loki-network  
-- a copy of loki-netowrk (gz tarball)  
+- a copy of loki-network (gz tarball)  
 - a copy of lokinet.ini (unachived)  
 - a copy of lokinet.service (unarchived)  
 
