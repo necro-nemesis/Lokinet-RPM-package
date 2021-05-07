@@ -54,7 +54,7 @@ Clone the lastest loki-network source code in your SOURCES folder, rename it and
     mv loki-network loki-network-<VERSION>  
     tar czf loki-network-<VERSION>.src.tar.gz loki-network-<VERSION>  
 - `<VERSION>` is version number of loki-network found in source e.g 0.8.4~2  
-- download copies of lokinet.ini and lokinet.service here in to the SOURCES folder
+- download copies of lokinet.ini and lokinet.service [here](https://github.com/necro-nemesis/Lokinet-RPM-package/tree/main/SOURCES) in to the SOURCES folder
   
 ### loki-network-control-panel
 
@@ -64,7 +64,7 @@ Clone the lastest loki-network-control-panel source code in your SOURCES folder,
     mv loki-network-control-panel loki-network-control-panel-<VERSION>
     tar czf loki-network-control-panel-<VERSION>.src.tar.gz loki-network-control-panel-<VERSION>
 - `<VERSION>` is the version number of loki-network-control-panel found in source e.g. 0.3.6  
-- download a copy of the share folder here in to the SOURCES folder.
+- download a copy of the share folder [here](https://github.com/necro-nemesis/Lokinet-RPM-package/tree/main/SOURCES) in to the SOURCES folder.
 
 When complete the SOURCE dir should appear as follows reflecting the latest versions.  
 
