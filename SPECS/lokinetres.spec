@@ -1,5 +1,5 @@
 Name:		loki-network
-Version:	0.9.0
+Version:	0.9.2
 Release:	2%{?dist}
 Summary:	Lokinet is an anonymous, decentralized and IP based overlay network for the internet.
 
@@ -31,6 +31,7 @@ BuildRequires:	libuv-devel
 BuildRequires:	libsodium-devel
 BuildRequires:	pkgconf-pkg-config
 BuildRequires:	systemd-devel
+BuildRequires:	libcurl-devel
 
 %description
 
@@ -50,8 +51,8 @@ BuildRequires:	systemd-devel
 
 mkdir -p build
 cd build
-cmake .. -DWITH_SYSTEMD=ON -DFORCE_OXENMQ_SUBMODULE=ON -DCMAKE_CXX_FLAGS="-march=x86-64 -mtune=haswell" -DCMAKE_C_FLAGS="-march=x86-64 -mtune=haswell" -DCMAKE_BUILD_TYPE=Release -DWITH_TESTS=OFF -DNATIVE_BUILD=OFF -DUSE_AVX2=OFF -DWITH_SETCAP=OFF -DBUILD_STATIC_DEPS=ON -DBUILD_SHARED_LIBS=OFF -DSTATIC_LINK=ON -DWITH_LTO=OFF
-make -j8
+cmake .. -DWITH_SYSTEMD=ON -DFORCE_OXENMQ_SUBMODULE=ON -DCMAKE_CXX_FLAGS="-march=x86-64 -mtune=haswell" -DCMAKE_C_FLAGS="-march=x86-64 -mtune=haswell" -DCMAKE_BUILD_TYPE=Release -DWITH_TESTS=OFF -DNATIVE_BUILD=OFF -DUSE_AVX2=OFF -DWITH_SETCAP=OFF -DBUILD_SHARED_LIBS=OFF -DSTATIC_LINK=ON -DWITH_LTO=OFF -DBUILD_STATIC_DEPS=ON
+make -j8 >> build_log.txt 2>&1
 make DESTDIR=/%{_builddir} install
 
 %install
