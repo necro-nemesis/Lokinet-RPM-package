@@ -1,5 +1,5 @@
 Name:           oxen-mq
-Version:        1.2.4
+Version:        1.2.6
 Release:        1%{?dist}
 Summary:        Lokinet is an anonymous, decentralized and IP based overlay network for the internet.
 
@@ -94,6 +94,6 @@ cd build
 
 
 %changelog
-* Tue Mar 09 2021 Technical Tumbleweed (necro_nemesis@hotmail.com) oxenmq
+* Thu Jul 22 2021 Technical Tumbleweed (necro_nemesis@hotmail.com) oxenmq
 -First oxenmq RPM
-
+-Second build update to v1.2.6
