@@ -95,13 +95,13 @@ Download the three RPM packages to the target system
     sudo yum install loki-network-<VERSION>.fc33.x86_64.rpm
     sudo yum install loki-network-control-panel-<VERSION>.fc33.x86_64.rpm
 
-## Building with Resolvconf
+## Building with systemd-resolved support
 
- - Use SPEC file lokinetresolv.spec to build  
+ - Use SPEC file lokinet.spec to build (systemd-resolved used by default)
   
-Differences between lokinetresolv.spec and lokinet.spec  
- - Uncommented resolvconf code found in lokinet.spec
- - installs and uses 00-lokinet.conf & lokinet-resolvconf in SOURCES folder
+To remove systemd-resolved support from build
+ - Comment out all resolvconf code found in lokinet.spec i.e.lines creating directories and copying of files below.
+ - Comment out SOURCES 00-lokinet.conf & lokinet-resolvconf
 
 ## Support us
 
