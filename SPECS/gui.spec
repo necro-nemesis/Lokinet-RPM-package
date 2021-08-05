@@ -1,5 +1,5 @@
 Name:           loki-network-control-panel
-Version:        0.3.6
+Version:        0.3.8
 Release:        1%{?dist}
 Summary:        Lokinet is an anonymous, decentralized and IP based overlay network for the internet.
 
