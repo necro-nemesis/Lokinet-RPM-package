@@ -52,7 +52,14 @@ BuildRequires:  jemalloc-devel
 
 mkdir -p build
 cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_FLAGS="-march=x86-64 -mtune=haswell" -DCMAKE_CXX_FLAGS="-march=x86-64 -mtune=haswell" -DNATIVE_BUILD=OFF -DUSE_NETNS=OFF -DUSE_AVX2=OFF -DXSAN=OFF -DWITH_TESTS=OFF -DDOWNLOAD_SODIUM=OFF -DSUBMODULE_CHECK=OFF -DWITH_SYSTEMD=ON -DFORCE_OXENMQ_SUBMODULE=ON -DBUILD_SHARED_LIBS=OFF -Wno-dev
+cmake .. -DCMAKE_BUILD_TYPE=Release \
+	 -DCMAKE_C_FLAGS="-march=x86-64 -mtune=haswell" \
+	 -DCMAKE_CXX_FLAGS="-march=x86-64 -mtune=haswell" \
+	 -DNATIVE_BUILD=OFF \
+	 -DUSE_AVX2=OFF \
+	 -DWITH_TESTS=OFF \
+	 -DWITH_SYSTEMD=ON \
+	 -DBUILD_SHARED_LIBS=OFF \
 make -j8 #>> build_log.txt 2>&1
 make DESTDIR=/%{_builddir} install
 
