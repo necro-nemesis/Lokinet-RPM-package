@@ -59,7 +59,7 @@ cmake .. -DCMAKE_BUILD_TYPE=Release \
 	 -DUSE_AVX2=OFF \
 	 -DWITH_TESTS=OFF \
 	 -DWITH_SYSTEMD=ON \
-	 -DBUILD_SHARED_LIBS=OFF \
+	 -DBUILD_SHARED_LIBS=OFF
 make -j8 #>> build_log.txt 2>&1
 make DESTDIR=/%{_builddir} install
 
